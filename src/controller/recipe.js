@@ -29,7 +29,7 @@ export default({ config, db }) => {
   });
 
   // '/v1/recipe/add' - POST - add a food truck
-  api.post('/add',authenticate, (req, res) => {
+  api.post('/add', (req, res) => {
     let newRecipe = new Recipe();
     newRecipe.name = req.body.name;
     newRecipe.description=req.body.description;
